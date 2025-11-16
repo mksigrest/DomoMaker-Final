@@ -58,6 +58,10 @@ nav:nth-child(1) {
     background-color: #55acee;
     border-radius: 4px;
     padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: nowrap;
 }
 
 .domoForm label {

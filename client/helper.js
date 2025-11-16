@@ -31,7 +31,7 @@ const sendPost = async (url, data, handler) => {
     }
 
     if (handler) {
-        handle(result);
+        handler(result);
     }
 };
 

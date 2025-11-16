@@ -29,4 +29,18 @@ const sendPost = async (url, data, handler) => {
     if (result.error) {
         handleError(result.error);
     }
+
+    if (handler) {
+        handle(result);
+    }
+};
+
+const hideError = () => {
+    document.getElementById('domoMessage').classList.add('hidden');
+};
+
+module.exports = {
+    handleError,
+    sendPost,
+    hideError,
 };

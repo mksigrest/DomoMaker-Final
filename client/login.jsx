@@ -39,3 +39,21 @@ const handleSignup = (e) => {
     helper.sendPost(e.target.action, { username, pass, pass2 });
     return false;
 }
+
+const LoginWindow = (props) => {
+    return (
+        <form id="loginForm"
+            name="loginForm"
+            onSubmit={handleLogin}
+            action="/login"
+            method="POST"
+            className="mainForm"
+        >
+            <label htmlFor="username">Username: </label>
+            <input id="user" type="text" name="username" placeholder="username" />
+            <label htmlFor="pass">Password: </label>
+            <input id="pass" type="password" name="pass" placeholder="password" />
+            <input className="formSubmit" type="submit" value="Sign in" />
+        </form>
+    );
+};

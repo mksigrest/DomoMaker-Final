@@ -50,7 +50,6 @@ nav:nth-child(1) {
 #makeDomo {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
 }
 
 .domoForm {

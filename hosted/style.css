@@ -47,6 +47,12 @@ nav:nth-child(1) {
     background-color: #66bdff;
 }
 
+#makeDomo {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
 .domoForm {
     border: 2px solid #338acc;
     height: 35px;

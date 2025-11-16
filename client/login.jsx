@@ -58,7 +58,7 @@ const LoginWindow = (props) => {
     );
 };
 
-const signupWindow = (props) => {
+const SignupWindow = (props) => {
     return (
         <form id="signupForm"
             name="signupForm"
@@ -85,6 +85,12 @@ const init = () => {
     const root = createRoot(document.getElementById('content'));
 
     loginButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        root.render(<LoginWindow />);
+        return false;
+    });
+
+    signupButton.addEventListener('click', (e) => {
         e.preventDefault();
         root.render(<SignupWindow />);
         return false;

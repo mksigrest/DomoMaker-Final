@@ -1,8 +1,6 @@
 const models = require('../models');
 const Domo = models.Domo;
 
-//const totalDomos = await Domo.countDocuments({});
-
 const makeDomo = async (req, res) => {
     if (!req.body.name || !req.body.age || !req.body.level) {
         return res.status(400).json({ error: 'Name, age, and level are all required!' });
@@ -25,6 +23,14 @@ const makeDomo = async (req, res) => {
             return res.status(400).json({ error: 'Domo already exists!' });
         }
         return res.status(500).json({ error: 'Am error occured making domo!' });
+    }
+};
+
+const getStats = async (req, res) => {
+    try {
+        const ownerId = req.session.account._id;
+
+        const domos = await Domo.find({ owner: ownerId }).select('level');
     }
 }
 

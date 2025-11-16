@@ -86,7 +86,7 @@ const init = () => {
 
     loginButton.addEventListener('click', (e) => {
         e.preventDefault();
-        root.render(<LoginWindow />);
+        root.render(<SignupWindow />);
         return false;
     });
 

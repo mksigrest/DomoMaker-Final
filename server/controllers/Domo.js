@@ -61,4 +61,5 @@ module.exports = {
     makerPage,
     makeDomo,
     getDomos,
+    getStats,
 };

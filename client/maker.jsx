@@ -27,7 +27,7 @@ const DomoStats = () => {
         fetch('/getStats')
             .then(res => res.json())
             .then(data => setStats(data));
-    },);
+    }, []);
 
     return (
         <div className="stats">

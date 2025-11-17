@@ -26,7 +26,8 @@ const DomoStats = () => {
     useEffect(() => {
         fetch('/getStats')
             .then(res => res.json())
-    })
+            .then(data => setStats(data));
+    },);
 }
 
 const DomoForm = (props) => {

@@ -28,6 +28,13 @@ const DomoStats = () => {
             .then(res => res.json())
             .then(data => setStats(data));
     },);
+
+    return (
+        <div className="stats">
+            <h3>Total Domos: {stats.totalDomos}</h3>
+            <h3>Total Levels: {stats.totalLevels}</h3>
+        </div>
+    )
 }
 
 const DomoForm = (props) => {

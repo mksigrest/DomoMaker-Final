@@ -23,7 +23,10 @@ const handleDomo = (e, onDomoAdded) => {
 const DomoStats = () => {
     const [stats, getStats] = useState({ totalDomos: 0, totalLevels: 0 });
 
-
+    useEffect(() => {
+        fetch('/getStats')
+            .then(res => res.json())
+    })
 }
 
 const DomoForm = (props) => {

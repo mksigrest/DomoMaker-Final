@@ -21,7 +21,7 @@ const handleDomo = (e, onDomoAdded) => {
 }
 
 const DomoStats = () => {
-    const [stats, getStats] = useState({ totalDomos: 0, totalLevels: 0 });
+    const [stats, setStats] = useState({ totalDomos: 0, totalLevels: 0 });
 
     useEffect(() => {
         fetch('/getStats')

@@ -29,10 +29,17 @@ const makeDomo = async (req, res) => {
 const getStats = async (req, res) => {
     try {
         const ownerId = req.session.account._id;
-
         const domos = await Domo.find({ owner: ownerId }).select('level');
+
+        const totalDomos = domos.length;
+        const totalLevels = domos.reduce((sum, d) => sum + d.level, 0);
+
+        return res.json({ totalDomos, totalLevels });
+    } catch (err) {
+        console.error(err);
+        return res.status(400).json({ error: 'Error fetching statistics ' });
     }
-}
+};
 
 const makerPage = (req, res) => {
     return res.render('app');

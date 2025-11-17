@@ -104,7 +104,7 @@ const App = () => {
                 <DomoForm triggerReload={() => setReloadDomos(!reloadDomos)} />
             </div>
             <div id="domoStats">
-                <DomoStats triggerReload={() => setReloadDomos(!reloadDomos) } />
+                <DomoStats triggerReload={reloadDomos} />
             </div>
             <div id="domos">
                 <DomoList domos={[]} reloadDomos={reloadDomos} />

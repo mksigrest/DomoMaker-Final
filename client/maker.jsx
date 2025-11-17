@@ -20,6 +20,12 @@ const handleDomo = (e, onDomoAdded) => {
     return false;
 }
 
+const DomoStats = () => {
+    const [stats, getStats] = useState({ totalDomos: 0, totalLevels: 0 });
+
+
+}
+
 const DomoForm = (props) => {
     return (
         <form id="domoForm"

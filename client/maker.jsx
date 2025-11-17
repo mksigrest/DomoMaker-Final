@@ -20,14 +20,14 @@ const handleDomo = (e, onDomoAdded) => {
     return false;
 }
 
-const DomoStats = () => {
+const DomoStats = (props) => {
     const [stats, setStats] = useState({ totalDomos: 0, totalLevels: 0 });
 
     useEffect(() => {
         fetch('/getStats')
             .then(res => res.json())
             .then(data => setStats(data));
-    }, []);
+    }, [props.triggerReload]);
 
     return (
         <div className="stats">
